@@ -1,0 +1,65 @@
+# Sensors tổng
+sun.sun:
+  friendly_name: Mặt trời
+sensor.yr_humidity:
+  friendly_name: Độ ẩm
+sensor.yr_dewpoint_temperature:
+  friendly_name: Điểm sương
+sensor.yr_temperature:
+  friendly_name: Nhiệt độ
+
+
+# Thiết bị 1
+sensor.iota_wallet_1:
+  icon: mdi:coin
+  friendly_name: Ví IOTA của thiết bị 
+
+sensor.machine_1_temperature:
+  friendly_name: Nhiệt độ
+  device_class: temperature
+sensor.machine_1_humidity:
+  friendly_name: Độ ẩm
+  device_class: humidity
+switch.all_sensor_1:
+  friendly_name: Bật/tắt hệ thống cảm biến
+switch.switch_device_1:
+  friendly_name: Bật/tắt thiết bị
+# Thiết bị 2
+sensor.iota_wallet_2:
+  icon: mdi:coin
+  friendly_name: Ví IOTA của thiết bị 
+sensor.machine_2_temperature:
+  friendly_name: Nhiệt độ
+  device_class: temperature
+sensor.machine_2_humidity:
+  friendly_name: Độ ẩm
+  device_class: humidity
+switch.all_sensor_2:
+  friendly_name: Bật/tắt hệ thống cảm biến
+switch.switch_device_2:
+  friendly_name: Bật/tắt thiết bị
+# Thiết bị 2
+sensor.iota_wallet_3:
+  icon: mdi:coin
+  friendly_name: Ví IOTA của thiết bị 
+sensor.machine_3_temperature:
+  friendly_name: Nhiệt độ
+  device_class: temperature
+sensor.machine_3_humidity:
+  friendly_name: Độ ẩm
+  device_class: humidity
+switch.all_sensor_3:
+  friendly_name: Bật/tắt hệ thống cảm biến
+switch.switch_device_3:
+  friendly_name: Bật/tắt thiết bị
+
+#thông tin chung
+sensor.iota_wallet_total:
+  icon: mdi:coin
+  friendly_name: Tổng IOTA
+sensor.date:
+  friendly_name: Ngày
+sensor.time:
+  friendly_name: Giờ
+sensor.time_utc: 
+  friendly_name: Giờ UTC

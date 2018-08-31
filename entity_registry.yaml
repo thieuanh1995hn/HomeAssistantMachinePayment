@@ -1,0 +1,10 @@
+sensor.tas_iphone_7_battery_level:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: level_tas_iphone_7
+sensor.tas_iphone_7_battery_state:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: state_tas_iphone_7

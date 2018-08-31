@@ -1,0 +1,59 @@
+  - platform: mqtt
+    name: all_sensor_1
+    command_topic: outside/in_stop_all_service
+    state_topic: outside/out_stop_all_service
+    optimistic: false
+    retain: false
+    payload_on: '1'
+    payload_off: '0'
+    qos: 2
+
+  - platform: mqtt
+    name: switch_device_1
+    command_topic: bedroom/desktop-lamp-in
+    state_topic: bedroom/desktop-lamp-out
+    optimistic: false
+    retain: false
+    payload_on: '1'
+    payload_off: '0'
+    qos: 2
+
+  - platform: mqtt
+    name: all_sensor_2
+    command_topic: outside/in_stop_all_service_2
+    state_topic: outside/out_stop_all_service_2
+    optimistic: false
+    retain: false
+    payload_on: '1'
+    payload_off: '0'
+    qos: 2
+
+  - platform: mqtt
+    name: switch_device_2
+    command_topic: bedroom/desktop-lamp-in_2
+    state_topic: bedroom/desktop-lamp-out_2
+    optimistic: false
+    retain: false
+    payload_on: '1'
+    payload_off: '0'
+    qos: 2
+
+  - platform: mqtt
+    name: all_sensor_3
+    command_topic: outside/in_stop_all_service_2
+    state_topic: outside/out_stop_all_service_2
+    optimistic: false
+    retain: false
+    payload_on: '1'
+    payload_off: '0'
+    qos: 2
+
+  - platform: mqtt
+    name: switch_device_3
+    command_topic: bedroom/desktop-lamp-in_2
+    state_topic: bedroom/desktop-lamp-out_2
+    optimistic: false
+    retain: false
+    payload_on: '1'
+    payload_off: '0'
+    qos: 2

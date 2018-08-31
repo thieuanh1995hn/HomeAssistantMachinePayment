@@ -1,0 +1,44 @@
+  machine_view:
+    view: yes
+    name: Thiết bị
+    entities:
+      - group.machine_1
+      - group.machine_2
+      - group.machine_3
+  machine_1:
+    name: Thiết bị 1 (Bóng đèn)
+    entities:
+      - sensor.iota_wallet_1
+      - sensor.machine_1_temperature
+      - sensor.machine_1_humidity
+      - switch.all_sensor_1
+      - switch.switch_device_1
+  machine_2:
+    name: Thiết bị 2 (Quạt cây)
+    entities:
+      - sensor.iota_wallet_2
+      - sensor.machine_2_temperature
+      - sensor.machine_2_humidity
+      - switch.all_sensor_2
+      - switch.switch_device_2
+  machine_3:
+    name: Thiết bị 3 (May giặt)
+    entities:
+      - sensor.iota_wallet_3
+      - sensor.machine_3_temperature
+      - sensor.machine_3_humidity
+      - switch.all_sensor_3
+      - switch.switch_device_3
+
+  general_view:
+    view: yes
+    name: Thông tin chung
+    entities:
+      - group.general
+  general:
+     name: Thông tin chung 
+     entities:
+      - sensor.iota_wallet_total
+      - sensor.date
+      - sensor.time
+      - sensor.time_utc

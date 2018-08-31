@@ -1,0 +1,101 @@
+ # Sensor chung
+ - platform: yr
+   forecast: 24
+   monitored_conditions:
+     - temperature
+     - humidity
+     - dewpointTemperature
+
+ - platform: time_date
+   display_options:
+     - 'time'
+     - 'date'
+     - 'time_utc'
+
+ - platform: rest
+   resource: https://walletservice.iota.community:443
+   method: POST
+   headers: 
+     Content-Type: application/json
+     X-IOTA-API-Version: 1
+   payload: '{"command": "getBalances", "addresses": ["QUTDINNSNPCSBEWVAZRPIYNIOZUEBHZPTGMSCIGIUEPCQSSR9KMLYZF9OIIVGWCWJADHODXPRORASXN9D","LMD9P9JZTNJYSEROPPRVQPSHIPRRWBPECCUSUJSWMWBGQTLOJLZQE9EHNPKPTSBABKZRWZJDDGIGBFIZX","LDSUWOBCOBNHGKKO9YACKJDZLYCGHZZWVGWEXMZGUUU9NFHOMRW9WJRMGFWDJCMBDYYMCVXQCIHTBVQLZ"], "threshold": 100}'
+  #  json_attributes: balances
+   unit_of_measurement: IOTA
+   name: iota_wallet_total
+   value_template: '{{ "{0:,.0f}".format(float(value_json["balances"][0]) + float(value_json["balances"][1]) + float(value_json["balances"][2])) }}'
+
+# sensor thiet bi 1
+ - platform : mqtt
+   state_topic: "outside/humidity-sensing-front-door"
+   name: machine_1_humidity
+   unit_of_measurement: "%"
+   value_template: '{{ value | round(1) }}'
+
+ - platform : mqtt
+   state_topic: "outside/temperature-sensing-front-door"
+   name: machine_1_temperature
+   unit_of_measurement: "°C"
+   value_template: '{{ value | round(1) }}'
+
+ - platform: rest
+   resource: https://walletservice.iota.community:443
+   method: POST
+   headers: 
+     Content-Type: application/json
+     X-IOTA-API-Version: 1
+   payload: '{"command": "getBalances", "addresses": ["LDSUWOBCOBNHGKKO9YACKJDZLYCGHZZWVGWEXMZGUUU9NFHOMRW9WJRMGFWDJCMBDYYMCVXQCIHTBVQLZ"], "threshold": 100}'
+  #  json_attributes: balances
+   unit_of_measurement: IOTA
+   name: iota_wallet_1
+   value_template: '{{ "{0:,.0f}".format(float(value_json["balances"][0]))}}'
+
+#sensor thiet bi 2
+ - platform : mqtt
+   state_topic: "outside/temperature-sensing-front-door2"
+   name: machine_2_temperature
+   unit_of_measurement: "°C"
+   value_template: '{{ value | round(1) }}'
+
+ - platform : mqtt
+   state_topic: "outside/humidity-sensing-front-door2"
+   name: machine_2_humidity
+   unit_of_measurement: "%"
+   value_template: '{{ value | round(1) }}'
+
+ - platform: rest
+   resource: https://walletservice.iota.community:443
+   method: POST
+   headers: 
+     Content-Type: application/json
+     X-IOTA-API-Version: 1
+   payload: '{"command": "getBalances", "addresses": ["QUTDINNSNPCSBEWVAZRPIYNIOZUEBHZPTGMSCIGIUEPCQSSR9KMLYZF9OIIVGWCWJADHODXPRORASXN9D"], "threshold": 100}'
+  #  json_attributes: balances
+   unit_of_measurement: IOTA
+   name: iota_wallet_2
+   value_template: '{{ "{0:,.0f}".format(float(value_json["balances"][0]))}}'
+   address: QUTDINNSNPCSBEWVAZRPIYNIOZUEBHZPTGMSCIGIUEPCQSSR9KMLYZF9OIIVGWCWJADHODXPRORASXN9D
+
+#sensor thiet bi 3
+ - platform : mqtt
+   state_topic: "outside/temperature-sensing-front-door3"
+   name: machine_3_temperature
+   unit_of_measurement: "°C"
+   value_template: '{{ value | round(1) }}'
+
+ - platform : mqtt
+   state_topic: "outside/humidity-sensing-front-door3"
+   name: machine_3_humidity
+   unit_of_measurement: "%"
+   value_template: '{{ value | round(1) }}'
+
+ - platform: rest
+   resource: https://walletservice.iota.community:443
+   method: POST
+   headers: 
+     Content-Type: application/json
+     X-IOTA-API-Version: 1
+   payload: '{"command": "getBalances", "addresses": ["LMD9P9JZTNJYSEROPPRVQPSHIPRRWBPECCUSUJSWMWBGQTLOJLZQE9EHNPKPTSBABKZRWZJDDGIGBFIZX"], "threshold": 100}'
+  #  json_attributes: balances
+   unit_of_measurement: IOTA
+   name: iota_wallet_3
+   value_template: '{{ "{0:,.0f}".format(float(value_json["balances"][0]))}}'
