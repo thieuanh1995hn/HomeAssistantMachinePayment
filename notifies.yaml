@@ -2,7 +2,6 @@
     platform: slack
     api_key: xoxb-412777719570-412779266290-0Mql8RkWNzSbIYG8hg1GBhHw
     default_channel: '#machine-payment'
-    notify:
 
   - name: notification_all_platforms
     platform: group

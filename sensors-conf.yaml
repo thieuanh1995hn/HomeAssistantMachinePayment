@@ -13,12 +13,12 @@
      - 'time_utc'
 
  - platform: rest
-   resource: https://walletservice.iota.community:443
+   resource: https://nodes.devnet.thetangle.org:443
    method: POST
    headers: 
      Content-Type: application/json
      X-IOTA-API-Version: 1
-   payload: '{"command": "getBalances", "addresses": ["QUTDINNSNPCSBEWVAZRPIYNIOZUEBHZPTGMSCIGIUEPCQSSR9KMLYZF9OIIVGWCWJADHODXPRORASXN9D","LMD9P9JZTNJYSEROPPRVQPSHIPRRWBPECCUSUJSWMWBGQTLOJLZQE9EHNPKPTSBABKZRWZJDDGIGBFIZX","LDSUWOBCOBNHGKKO9YACKJDZLYCGHZZWVGWEXMZGUUU9NFHOMRW9WJRMGFWDJCMBDYYMCVXQCIHTBVQLZ"], "threshold": 100}'
+   payload: '{"command": "getBalances", "addresses": ["QUTDINNSNPCSBEWVAZRPIYNIOZUEBHZPTGMSCIGIUEPCQSSR9KMLYZF9OIIVGWCWJADHODXPRORASXN9D","UFYBUTDMELKT99YWXWAZNUYOBXZQAUFDKJFRPRQFFIXHPOUSFHQVKIQVLYXADDMCXBHBTXRWVSYASZWBZ","AIZPEYNCKJFCYEYZHVEFZANMNRNJGEQCICOZ9HOCRHKETIRVRDHIBDFKLNSOHCT9GTUMMOQHTACLQBI9D"], "threshold": 100}'
   #  json_attributes: balances
    unit_of_measurement: IOTA
    name: iota_wallet_total
@@ -38,12 +38,12 @@
    value_template: '{{ value | round(1) }}'
 
  - platform: rest
-   resource: https://walletservice.iota.community:443
+   resource: https://nodes.devnet.thetangle.org:443
    method: POST
    headers: 
      Content-Type: application/json
      X-IOTA-API-Version: 1
-   payload: '{"command": "getBalances", "addresses": ["LDSUWOBCOBNHGKKO9YACKJDZLYCGHZZWVGWEXMZGUUU9NFHOMRW9WJRMGFWDJCMBDYYMCVXQCIHTBVQLZ"], "threshold": 100}'
+   payload: '{"command": "getBalances", "addresses": ["QUTDINNSNPCSBEWVAZRPIYNIOZUEBHZPTGMSCIGIUEPCQSSR9KMLYZF9OIIVGWCWJADHODXPRORASXN9D"], "threshold": 100}'
   #  json_attributes: balances
    unit_of_measurement: IOTA
    name: iota_wallet_1
@@ -63,17 +63,16 @@
    value_template: '{{ value | round(1) }}'
 
  - platform: rest
-   resource: https://walletservice.iota.community:443
+   resource: https://nodes.devnet.thetangle.org:443
    method: POST
    headers: 
      Content-Type: application/json
      X-IOTA-API-Version: 1
-   payload: '{"command": "getBalances", "addresses": ["QUTDINNSNPCSBEWVAZRPIYNIOZUEBHZPTGMSCIGIUEPCQSSR9KMLYZF9OIIVGWCWJADHODXPRORASXN9D"], "threshold": 100}'
+   payload: '{"command": "getBalances", "addresses": ["UFYBUTDMELKT99YWXWAZNUYOBXZQAUFDKJFRPRQFFIXHPOUSFHQVKIQVLYXADDMCXBHBTXRWVSYASZWBZ"], "threshold": 100}'
   #  json_attributes: balances
    unit_of_measurement: IOTA
    name: iota_wallet_2
    value_template: '{{ "{0:,.0f}".format(float(value_json["balances"][0]))}}'
-   address: QUTDINNSNPCSBEWVAZRPIYNIOZUEBHZPTGMSCIGIUEPCQSSR9KMLYZF9OIIVGWCWJADHODXPRORASXN9D
 
 #sensor thiet bi 3
  - platform : mqtt
@@ -89,12 +88,12 @@
    value_template: '{{ value | round(1) }}'
 
  - platform: rest
-   resource: https://walletservice.iota.community:443
+   resource: https://nodes.devnet.thetangle.org:443
    method: POST
    headers: 
      Content-Type: application/json
      X-IOTA-API-Version: 1
-   payload: '{"command": "getBalances", "addresses": ["LMD9P9JZTNJYSEROPPRVQPSHIPRRWBPECCUSUJSWMWBGQTLOJLZQE9EHNPKPTSBABKZRWZJDDGIGBFIZX"], "threshold": 100}'
+   payload: '{"command": "getBalances", "addresses": ["AIZPEYNCKJFCYEYZHVEFZANMNRNJGEQCICOZ9HOCRHKETIRVRDHIBDFKLNSOHCT9GTUMMOQHTACLQBI9D"], "threshold": 100}'
   #  json_attributes: balances
    unit_of_measurement: IOTA
    name: iota_wallet_3
